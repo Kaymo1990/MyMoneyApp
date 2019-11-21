@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-    before_save { self.username = username.downcase! }
+    before_save { self.username = username.downcase }
     validates :username, presence: true,
         uniqueness: { case_sensitive: false }
         validates :salary, presence: true
